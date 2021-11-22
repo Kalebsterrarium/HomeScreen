@@ -1,9 +1,45 @@
 //3X3 homescreen
 
-void setup() {}//End setup()
+//Global Variables
+color white=#FFFFFF, random;
+float  circleDiameter, rectWidth, rectHeight;
+float ptX1, ptY1;
+float ptX2, ptY2;
 
-void draw() {}//End draw()
+void setup() 
+{
+  fullScreen(); //displayWidth, displayHeight
+  //
+  //Population 
+  ptX1 = displayWidth*0;
+  ptY1 = displayHeight*0;
+  rectWidth = displayWidth*1/3; 
+  rectHeight = displayHeight*1/3;
+  circleDiameter = displayWidth*1/40;
+  random= color(random(255),random(255),random(255));
+}//End setup()
 
-void mousePressed() {}//End mousePressed()
+void draw() 
+{
+ rect(ptX1, ptY1, rectWidth, rectHeight);
+ rect(ptX2, ptY2, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //rect(ptX1, ptY1, rectWidth, rectHeight);
+ //
+ fill(random);
+  ellipse(ptX1, ptY1, circleDiameter, circleDiameter);
+  fill(white);
+}//End draw()
 
-void keyPressed() {}//End keyPressed()
+void mousePressed() 
+{
+}//End mousePressed()
+
+void keyPressed() 
+{
+}//End keyPressed()
