@@ -18,19 +18,20 @@ float ptX12, ptY12;
 float ptX13, ptY13;
 float ptX14, ptY14;
 float ptX15, ptY15;
+float ptX16, ptY16;
 void setup() 
 {
   fullScreen(); //displayWidth, displayHeight
   //
   //Population 
   ptX1 =  ptX7 = ptX4 = displayWidth*0;
-  ptY1 =  ptY2 = ptY3 = ptY10 = displayHeight*0;
-  ptX2 = ptX5 = ptX8 = displayWidth*1/3;
-  ptX3 = ptX9 = ptX6 = displayWidth*2/3;
+  ptY1 =  ptY2 = ptY3 = ptY10 = ptX16 = displayHeight*0;
+  ptX2 = ptX5 = ptX8 = ptX15 = displayWidth*1/3;
+  ptX3 = ptX9 = ptX6 = ptX14 =  displayWidth*2/3;
   ptY4 = ptY6 = ptY5 = ptY11 = displayHeight*1/3;
-  ptY7 = ptY9 = ptY8 = displayHeight*2/3;
- ptX10 = ptX11 =  displayWidth*1;
- 
+  ptY7 = ptY9 = ptY8 = ptY12 = displayHeight*2/3;
+ ptX10 = ptX11 = ptX12 = ptX13 = displayWidth*1;
+ ptY13 = ptY14 = ptY15 = ptY16 = displayHeight*1;
   //displayHeight*1;
  
   rectWidth = displayWidth*1/3; 
@@ -63,11 +64,11 @@ void draw()
   ellipse(ptX9, ptY9, circleDiameter, circleDiameter);
   ellipse(ptX10, ptY10, circleDiameter, circleDiameter);
   ellipse(ptX11, ptY11, circleDiameter, circleDiameter);
-  ellipse(ptX9, ptY9, circleDiameter, circleDiameter);   
-  ellipse(ptX9, ptY9, circleDiameter, circleDiameter);
-  ellipse(ptX9, ptY9, circleDiameter, circleDiameter);
-  ellipse(ptX9, ptY9, circleDiameter, circleDiameter);
-  ellipse(ptX9, ptY9, circleDiameter, circleDiameter);
+  ellipse(ptX12, ptY12, circleDiameter, circleDiameter);   
+  ellipse(ptX13, ptY13, circleDiameter, circleDiameter);
+  ellipse(ptX14, ptY14, circleDiameter, circleDiameter);
+  ellipse(ptX15, ptY15, circleDiameter, circleDiameter);
+  ellipse(ptX16, ptY16, circleDiameter, circleDiameter);
   fill(white);
 }//End draw()
 
