@@ -21,6 +21,7 @@ float ptX15, ptY15;
 float ptX16, ptY16;
 void setup() 
 {
+  frameRate(2);
   fullScreen(); //displayWidth, displayHeight
   //
   //Population 
