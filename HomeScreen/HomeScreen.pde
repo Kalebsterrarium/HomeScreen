@@ -37,7 +37,7 @@ void setup()
   rectWidth = displayWidth*1/3; 
   rectHeight = displayHeight*1/3;
   circleDiameter = displayWidth*1/49;
-  random= color(random(255),random(255),random(255));
+ 
 }//End setup()
 
 void draw() 
@@ -52,6 +52,7 @@ void draw()
  rect(ptX8, ptY8, rectWidth, rectHeight);
  rect(ptX9, ptY9, rectWidth, rectHeight);
  //
+  random= color(random(255),random(255),random(255));
  fill(random);
   ellipse(ptX1, ptY1, circleDiameter, circleDiameter);
   ellipse(ptX2, ptY2, circleDiameter, circleDiameter);
