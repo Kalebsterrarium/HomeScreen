@@ -21,7 +21,7 @@ float ptX15, ptY15;
 float ptX16, ptY16;
 void setup() 
 {
-  frameRate(2);
+  frameRate(1);
   fullScreen(); //displayWidth, displayHeight
   //
   //Population 
@@ -43,6 +43,7 @@ void setup()
 
 void draw() 
 {
+  frameRate(random(1,60));
   fill(random15);
  rect(ptX1, ptY1, rectWidth, rectHeight);
   fill(white);
