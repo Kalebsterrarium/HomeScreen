@@ -19,6 +19,13 @@ float ptX13, ptY13;
 float ptX14, ptY14;
 float ptX15, ptY15;
 float ptX16, ptY16;
+int  countingNumber, one;
+ float faceX, faceY, faceDiameter;
+float lefteyeX, lefteyeY, lefteyeDiameter;
+float circleA, circleB, Circlediameter;
+float righteyeA, righteyeB, righteyediameter;
+float circleC, circleD, CircleDiameterCD;
+color blue=#333CD3, colourFill, black=#000000;
 void setup() 
 {
   frameRate(1);
@@ -33,6 +40,23 @@ void setup()
   ptY7 = ptY9 = ptY8 = ptY12 = displayHeight*2/3;
  ptX10 = ptX11 = ptX12 = ptX13 = displayWidth*1;
  ptY13 = ptY14 = ptY15 = ptY16 = displayHeight*1;
+ faceX = displayWidth*1/6; 
+  faceY = displayHeight*1/6;
+  faceDiameter = displayHeight*1/3; //smallest dimension
+  lefteyeX =  faceX*17/24; 
+  lefteyeY = faceY*3/5;
+  lefteyeDiameter = faceDiameter*1/4; //smallest dimension
+  circleA =  faceX*1.3; 
+  circleB = faceY*3/5;
+  Circlediameter = faceDiameter*1/4; //smallest dimension
+  righteyeA = lefteyeX; 
+  righteyeB = lefteyeY;
+  righteyediameter = Circlediameter*1/2;
+  circleC = circleA; 
+  circleD = circleB;
+  CircleDiameterCD = Circlediameter*1/2;
+  colourFill= blue;
+
   //displayHeight*1;
  
   rectWidth = displayWidth*1/3; 
@@ -43,7 +67,7 @@ void setup()
 
 void draw() 
 {
-  frameRate(random(1,60));
+  frameRate(random(1,69));
   fill(random15);
  rect(ptX1, ptY1, rectWidth, rectHeight);
   fill(white);
@@ -91,6 +115,22 @@ void draw()
   random14= color(random(255),random(255),random(255));
   random15= color(random(255),random(255),random(255));
   
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
  fill(random);
   ellipse(ptX1, ptY1, circleDiameter, circleDiameter);
   fill(white);
@@ -139,6 +179,23 @@ void draw()
   fill(random15);
   ellipse(ptX16, ptY16, circleDiameter, circleDiameter);
   fill(white);
+  
+  ellipse(faceX, faceY, faceDiameter, faceDiameter);
+   fill(colourFill);
+  ellipse(lefteyeX, lefteyeY, lefteyeDiameter, lefteyeDiameter);
+  ellipse(circleA, circleB, Circlediameter, Circlediameter);
+   fill(black);
+  ellipse(righteyeA, righteyeB, righteyediameter, righteyediameter);
+  ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
+   fill(white);
+  
+ // countingNumber= countingNumber/one;
+  //one = 1;
+  //println( countingNumber);
+  
+  
+  
+  
 }//End draw()
 
 void mousePressed() 
