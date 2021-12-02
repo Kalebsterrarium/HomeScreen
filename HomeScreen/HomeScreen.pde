@@ -3,6 +3,7 @@
 //Global Variables
 color white=#FFFFFF, random, random1, random2 ,random3 ,random4 ,random5 ,random6 ,random7 ,random8 ,random9 ,random10 ,random11 ,random12 ,random13, random14, random15;
 float  circleDiameter, rectWidth, rectHeight;
+float button1X, button1Y, button1Width, button1Height;
 float ptX1, ptY1;
 float ptX2, ptY2;
 float ptX3, ptY3;
@@ -56,7 +57,10 @@ void setup()
   circleD = circleB;
   CircleDiameterCD = Circlediameter*1/2;
   colourFill= blue;
-
+button1X=displayWidth*1/12;
+button1Y=displayHeight*0;
+button1Width=displayWidth*1/6;
+button1Height=displayHeight*1/3;
   //displayHeight*1;
  
   rectWidth = displayWidth*1/3; 
@@ -189,6 +193,8 @@ void draw()
   ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
    fill(white);
   
+  
+ 
  // countingNumber= countingNumber/one;
   //one = 1;
   //println( countingNumber);
