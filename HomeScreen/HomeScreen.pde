@@ -26,13 +26,22 @@ float lefteyeX, lefteyeY, lefteyeDiameter;
 float circleA, circleB, Circlediameter;
 float righteyeA, righteyeB, righteyediameter;
 float circleC, circleD, CircleDiameterCD;
+
+float face2X, face2Y, face2Diameter;
+float lefteyeX2, lefteyeY2, lefteyeDiameter2;
+float circleA2, circleB2, Circlediameter2;
+float righteyeA2, righteyeB2, righteyediameter2;
+float circleC2, circleD2, CircleDiameterCD2;
+
 color blue=#333CD3, colourFill, black=#000000;
+Boolean button1=true, face1=true, face2=false;
 void setup() 
 {
   frameRate(1);
   fullScreen(); //displayWidth, displayHeight
   //
   //Population 
+  population();
   ptX1 =  ptX7 = ptX4 = ptX16 = displayWidth*0;
   ptY1 =  ptY2 = ptY3 = ptY10 =  displayHeight*0;
   ptX2 = ptX5 = ptX8 = ptX15 = displayWidth*1/3;
@@ -71,6 +80,7 @@ button1Height=displayHeight*1/3;
 
 void draw() 
 {
+  if (button1==true) rect(button1X, button1Y, button1Width, button1Height);
   frameRate(random(1,69));
   fill(random15);
  rect(ptX1, ptY1, rectWidth, rectHeight);
@@ -184,17 +194,29 @@ void draw()
   ellipse(ptX16, ptY16, circleDiameter, circleDiameter);
   fill(white);
   
-  ellipse(faceX, faceY, faceDiameter, faceDiameter);
-   fill(colourFill);
+
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  if (face1==true) {
+    ellipse(faceX, faceY, faceDiameter, faceDiameter);
+    fill(colourFill);
   ellipse(lefteyeX, lefteyeY, lefteyeDiameter, lefteyeDiameter);
   ellipse(circleA, circleB, Circlediameter, Circlediameter);
    fill(black);
   ellipse(righteyeA, righteyeB, righteyediameter, righteyediameter);
   ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
    fill(white);
+  }
+  if (face2==true) paste();
   
-  
- 
  // countingNumber= countingNumber/one;
   //one = 1;
   //println( countingNumber);
@@ -206,6 +228,24 @@ void draw()
 
 void mousePressed() 
 {
+  if(mouseX>button1X && mouseX<button1X+button1Width && mouseY>button1Y && mouseY<button1Y+button1Height)
+  {
+    button1=false;
+  if (button1==false) {
+     face2=true;
+     face1=false;
+  } 
+  else {
+    face2=false;
+    face1=true;
+  }
+  
+  
+  
+  
+  
+  
+  } 
 }//End mousePressed()
 
 void keyPressed() 
