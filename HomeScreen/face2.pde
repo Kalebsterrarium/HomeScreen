@@ -5,11 +5,11 @@ void population() {
   face2X = displayWidth*1/2; 
   face2Y = displayHeight*1/6;
   face2Diameter = displayHeight*1/3; //smallest dimension
-  lefteyeX2 =  faceX*1/2; 
-  lefteyeY2 = faceY*1/2;
+  lefteyeX2 =  displayWidth*11/20; 
+  lefteyeY2 = displayHeight*1/10;
   //smallest dimension
-  circleA2 =  faceX*1/2; 
-  circleB2 = faceY*1/3;
+  circleA2 =  displayWidth*9/20; 
+  circleB2 = displayHeight*1/10;
   //smallest dimension
   righteyeA2 = lefteyeX2; 
   righteyeB2 = lefteyeY2;
